@@ -1,0 +1,12 @@
+[Unit]
+Description=Dash Service
+After=network.target
+
+[Service]
+User=dashsvc
+WorkingDirectory=/opt/dash
+ExecStart=/usr/bin/python manage.py run
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
